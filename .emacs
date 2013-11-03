@@ -31,33 +31,33 @@
 ;                      charset
 ;                      (font-spec :"WenQuanYi Micro Hei Mono" :size 17)))
 
-;;¸ßÁÁ±à¼­ĞĞ
+;;é«˜äº®ç¼–è¾‘è¡Œ
 (require 'hl-line)
 (hl-line-mode 1)
 ;; or
 ;; (global-hl-line-mode 1)
 
-;;¹Ø±ÕÌáÊ¾Òô
+;;å…³é—­æç¤ºéŸ³
 (setq visible-bell t)
 
-;;¹Ø±Õ³õÊ¼Ò³Ãæ
+;;å…³é—­åˆå§‹é¡µé¢
 (setq inhibit-startup-message t)
 
-;;ÉèÖÃToolbar²»ÏÔÊ¾
+;;è®¾ç½®Toolbarä¸æ˜¾ç¤º
 (tool-bar-mode -1)
 
-;;ÏÔÊ¾ÁĞºÅ
+;;æ˜¾ç¤ºåˆ—å·
 (setq column-number-mode t)
 (setq line-number-mode t)
 
 (setq default-fill-column 60)
 
-;;ÉèÖÃTab¼üÎª¿Õ¸ñ
-(setq-default indent-tabs-mode nil) ;; Ê¹ÓÃspaceËõ½ø£¬²»Ê¹ÓÃtab×Ö·û
-(setq-default tab-width 4) ;; ÉèÖÃ Tab ¿í¶È
-(global-set-key (kbd "RET")'newline-and-indent) ;; ÉèÖÃ°´»Ø³µºó×Ô¶¯¶ÔÆë Tab
+;;è®¾ç½®Tabé”®ä¸ºç©ºæ ¼
+(setq-default indent-tabs-mode nil) ;; ä½¿ç”¨spaceç¼©è¿›ï¼Œä¸ä½¿ç”¨tabå­—ç¬¦
+(setq-default tab-width 4) ;; è®¾ç½® Tab å®½åº¦
+(global-set-key (kbd "RET")'newline-and-indent) ;; è®¾ç½®æŒ‰å›è½¦åè‡ªåŠ¨å¯¹é½ Tab
 
-;; ÉèÖÃ¸÷¸öÄ£Ê½µÄËõ½ø²ÎÊı
+;; è®¾ç½®å„ä¸ªæ¨¡å¼çš„ç¼©è¿›å‚æ•°
 (setq c-indent-level 4)
 (setq c-basic-offset 4)
 (setq standard-indent 4)
@@ -70,57 +70,57 @@
 
 
 
-;;ÉèÖÃ sentence-end ¿ÉÒÔÊ¶±ğÖĞÎÄ±êµã¡£²»ÓÃÔÚ fill Ê±ÔÚ¾äºÅºó²å ÈëÁ½¸ö¿Õ¸ñ¡£
-(setq sentence-end "\\([¡££¡£¿]\\|¡­¡­\\|[.?!][]\"')}]*\\($\\|[ \t]\\)\\)[ \t\n]*")
+;;è®¾ç½® sentence-end å¯ä»¥è¯†åˆ«ä¸­æ–‡æ ‡ç‚¹ã€‚ä¸ç”¨åœ¨ fill æ—¶åœ¨å¥å·åæ’ å…¥ä¸¤ä¸ªç©ºæ ¼ã€‚
+(setq sentence-end "\\([ã€‚ï¼ï¼Ÿ]\\|â€¦â€¦\\|[.?!][]\"')}]*\\($\\|[ \t]\\)\\)[ \t\n]*")
 (setq sentence-end-double-space nil)
 
-;;È±Ê¡µÄ major mode ÉèÖÃÎª text-mode
+;;ç¼ºçœçš„ major mode è®¾ç½®ä¸º text-mode
 (setq default-major-mode 'text-mode)
 
-;;À¨ºÅÆ¥ÅäÊ±ÏÔÊ¾ÁíÍâÒ»±ßµÄÀ¨ºÅ
+;;æ‹¬å·åŒ¹é…æ—¶æ˜¾ç¤ºå¦å¤–ä¸€è¾¹çš„æ‹¬å·
 (show-paren-mode t)
 (setq show-paren-style 'parentheses)
 
-;;¹â±ê¿¿½üÊó±êÖ¸ÕëÊ±£¬ÈÃÊó±êÖ¸Õë×Ô¶¯ÈÃ¿ª
+;;å…‰æ ‡é è¿‘é¼ æ ‡æŒ‡é’ˆæ—¶ï¼Œè®©é¼ æ ‡æŒ‡é’ˆè‡ªåŠ¨è®©å¼€
 (mouse-avoidance-mode 'animate)
 
-;;ÔÚ±êÌâÀ¸ÏÔÊ¾bufferµÄÃû×Ö
+;;åœ¨æ ‡é¢˜æ æ˜¾ç¤ºbufferçš„åå­—
 ;;(setq frame-title-format "emacs@%b")
 
-;;ÈÃ Emacs ¿ÉÒÔÖ±½Ó´ò¿ªºÍÏÔÊ¾Í¼Æ¬
+;;è®© Emacs å¯ä»¥ç›´æ¥æ‰“å¼€å’Œæ˜¾ç¤ºå›¾ç‰‡
 (auto-image-file-mode t)
 
-;;Óï·¨¼ÓÁÁ
+;;è¯­æ³•åŠ äº®
 (global-font-lock-mode t)
 
-;;ÉèÖÃ±ß¾à
+;;è®¾ç½®è¾¹è·
 (global-set-key [C-f10]
      (lambda ()
      (interactive)
      (set-window-margins (car (get-buffer-window-list (current-buffer) nil t)) 25 25)))
 
-;;°ÑÕâĞ©È±Ê¡½ûÓÃµÄ¹¦ÄÜ´ò¿ª
+;;æŠŠè¿™äº›ç¼ºçœç¦ç”¨çš„åŠŸèƒ½æ‰“å¼€
 (put 'set-goal-column 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 (put 'LaTeX-hide-environment 'disabled nil)
 
-;;ÉèÖÃÒ»ÏÂ±¸·İÊ±µÄ°æ±¾¿ØÖÆ
+;;è®¾ç½®ä¸€ä¸‹å¤‡ä»½æ—¶çš„ç‰ˆæœ¬æ§åˆ¶
 (setq version-control t)
 (setq kept-new-versions 3)
 (setq delete-old-versions t)
 (setq kept-old-versions 2)
 (setq dired-kept-versions 1)
 
-;;Æô¶¯aspell
+;;å¯åŠ¨aspell
 (setq-default ispell-program-name "aspell")
 
-;;ÈÃ dired ¿ÉÒÔµİ¹éµÄ¿½±´ºÍÉ¾³ıÄ¿Â¼
+;;è®© dired å¯ä»¥é€’å½’çš„æ‹·è´å’Œåˆ é™¤ç›®å½•
 (setq dired-recursive-copies 'top)
 (setq dired-recursive-deletes 'top)
 
-;×î´ó»¯
+;æœ€å¤§åŒ–
 (defun my-fullscreen ()
         (interactive)
         (set-frame-parameter nil 'fullscreen
@@ -128,7 +128,7 @@
 
 ;;(run-with-idle-timer 0.1 nil 'my-fullscreen)
 
-;; ´°Ìå×î´ó»¯ºÍ»Ö¸´ 
+;; çª—ä½“æœ€å¤§åŒ–å’Œæ¢å¤ 
 (defun w32-restore-frame () 
   "Restore a minimized frame" 
   (interactive) 
@@ -139,17 +139,17 @@
   (interactive) 
   (w32-send-sys-command 61488)) 
 
-;;ÉèÖÃcolor theme
+;;è®¾ç½®color theme
 (require 'color-theme)
 ;(color-theme-comidia)
 
 (setq molokai-theme-kit t)
 
-;;ÀúÊ·¼ÇÂ¼
+;;å†å²è®°å½•
 (require 'session)
 (add-hook 'after-init-hook 'session-initialize)
 
-;;Ê¹ÓÃdesktop save
+;;ä½¿ç”¨desktop save
 (load "desktop") 
 (desktop-load-default) 
 (desktop-read)
@@ -174,7 +174,7 @@
 (global-set-key (kbd "C-z") 'set-mark-command)
 
 (require 'htmlize)
-(setq org-src-fontify-natively t) ;;ÉèÖÃorgÄ£Ê½µÄÓï·¨¸ßÁÁ
+(setq org-src-fontify-natively t) ;;è®¾ç½®orgæ¨¡å¼çš„è¯­æ³•é«˜äº®
 ;; export to HTML 
 ;(setq org-export-html-style-include-default nil)
   
@@ -238,7 +238,7 @@
   )
 )
 
-;;ĞÂÎÅ×é
+;;æ–°é—»ç»„
 (setq gnus-select-method '(nntp "nntp.aioe.org"))
 (setq mm-coding-system-priorities '(iso-8859-1 gbk utf-8))
 (setq gnus-default-subscribed-newsgroups
